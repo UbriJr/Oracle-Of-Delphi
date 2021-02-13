@@ -1,5 +1,5 @@
 # Documentation:
-# n/a
+# https://docs.opencv.org/master/d6/d00/tutorial_py_root.html
 
 # Install OpenCV in order for the imports to work properly,
 # open the terminal on your machine and run the command:
