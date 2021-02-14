@@ -1,16 +1,16 @@
-# This is a sample Python script.
+# Documentation:
+# https://docs.opencv.org/master/d6/d00/tutorial_py_root.html
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Install OpenCV in order for the imports to work properly,
+# open the terminal on your machine and run the command:
+# Mac / Linux users: pip3 install opencv-python
+# Windows users: pip install opencv-python
+# or hover over the red underlined import and select "install opencv"
+
+# OpenCV import:
+import cv2
+
+print("I was here")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
