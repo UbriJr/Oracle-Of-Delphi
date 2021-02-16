@@ -30,3 +30,5 @@ cv2.imshow(windowName,img)
 # all the displayed images will be destroyed / closed
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+print("Hey")
