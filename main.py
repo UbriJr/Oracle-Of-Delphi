@@ -18,19 +18,8 @@ windowName = "Alphabet Window!"
 img = cv2.imread('assets/alphabet.png', -1)
 face_img = cv2.imread('assets/face.png', -1)
 
-
-
 # Resize Image (To 25% of its original size)
 img = cv2.resize(img, (0,0), fx=0.25, fy=0.25)
-
-#Getting the Resolution of The Screen
-import ctypes
-user32 = ctypes.windll.user32
-#Finds the Center of your Screen
-xres = int(user32.GetSystemMetrics(0))
-yres = int(user32.GetSystemMetrics(1))
-valuex = int(xres/2)
-valuey = int(yres/2)
 
 # Write an image (filename, source)
 # cv2.imwrite("new_img", img)
@@ -39,7 +28,7 @@ valuey = int(yres/2)
 cv2.imshow(windowName,img)
 
 # Moved Image to Center on the Screen
-cv2.moveWindow(windowName, (valuex-378),(valuey-191))
+cv2.moveWindow(windowName, 600 ,66)
 
 # Waits an infinite amount of time for a key press
 # Once the user presses any key on the keyboard
