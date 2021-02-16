@@ -9,12 +9,14 @@
 
 # OpenCV import:
 import cv2
+import numpy as np
 
 # Variables
 windowName = "Alphabet Window!"
 
 # Loads Image (stored in the "img" variable)
 img = cv2.imread('assets/alphabet.png', -1)
+face_img = cv2.imread('assets/face.png', -1)
 
 # Resize Image (To 25% of its original size)
 img = cv2.resize(img, (0,0), fx=0.25, fy=0.25)
