@@ -10,7 +10,25 @@
 # OpenCV import:
 import cv2
 
-print("I was here")
+# Variables
+windowName = "Alphabet Window!"
 
+# Loads Image (stored in the "img" variable)
+img = cv2.imread('assets/alphabet.png', -1)
 
+# Resize Image (To 25% of its original size)
+img = cv2.resize(img, (0,0), fx=0.25, fy=0.25)
 
+# Write an image (filename, source)
+# cv2.imwrite("new_img", img)
+
+# Displays Image
+cv2.imshow(windowName,img)
+
+# Waits an infinite amount of time for a key press
+# Once the user presses any key on the keyboard
+# all the displayed images will be destroyed / closed
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+print("Hey")
