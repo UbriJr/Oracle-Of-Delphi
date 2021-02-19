@@ -1,0 +1,12 @@
+This is a text file, if you need to leave notes or etc you can do so in here.
+- God of PSU
+
+To Do:
+
+- Perfectly center the GUI
+- Add welcome img to canvas upon start                                    (DONE)
+- Add button to the canvas
+- Add action to button such that user traverses GUI
+- Add name to title bar of GUI                                            (DONE)
+- Fix Keyboard Interrupt error / bug
+

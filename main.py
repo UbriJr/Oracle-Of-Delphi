@@ -18,15 +18,24 @@ light_slate_grey = "light slate gray"
 gray = "gray"
 
 # Variables
-windowName = "Alphabet Window!"
 height = 900  # Pixels
 width = 1100   # Pixels
 
 # Displays Tkinter GUI & Gives it Properties
 root = tk.Tk()
+root.title("Oracle of Delphi")
 
-Canvas = tk.Canvas(root,highlightthickness=2, highlightbackground="steel blue", bg=light_slate_grey, height=height, width=width)
-Canvas.pack()
+img = tk.PhotoImage(file = "assets/oracle_img.png")
+
+canvas = tk.Canvas(root,highlightthickness=2, highlightbackground="steel blue", bg=light_slate_grey, height=height, width=width)
+canvas.pack()
+
+#welcome_frame = tk.Frame(root,highlightthickness=0, highlightbackground="black", bg="black", height=height, width=width)
+#welcome_frame.pack_propagate(False)
+#welcome_frame.pack()
+
+# main_Window = canvas.create_window(2,2,window=welcome_frame, anchor='nw')
+canvas.create_image(2,2, anchor = 'nw', image = img)
 
 root.resizable(False, False)
 root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
@@ -39,7 +48,6 @@ root.mainloop()
 
 
 ############################################################################################################
-
 
 
 # Loads Image (stored in the "img" variable)
@@ -55,12 +63,8 @@ root.mainloop()
 # Displays Image
 #cv2.imshow(windowName,img)
 
-# Moved Image to Center on the Screen
-#cv2.moveWindow(windowName, 600 ,66)
-
 # Waits an infinite amount of time for a key press
 # Once the user presses any key on the keyboard
 # all the displayed images will be destroyed / closed
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
-
