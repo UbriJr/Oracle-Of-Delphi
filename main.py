@@ -18,12 +18,16 @@ light_slate_grey = "light slate gray"
 gray = "gray"
 
 # Variables
-height = 900  # Pixels
+height = 900   # Pixels
 width = 1100   # Pixels
 
 # Displays Tkinter GUI & Gives it Properties
 root = tk.Tk()
 root.title("Oracle of Delphi")
+
+#Created Button Above Background Image
+entry = tk.Button(root, text="Begin")
+entry.pack()
 
 img = tk.PhotoImage(file = "assets/oracle_img.png")
 
@@ -33,6 +37,7 @@ canvas.pack()
 #welcome_frame = tk.Frame(root,highlightthickness=0, highlightbackground="black", bg="black", height=height, width=width)
 #welcome_frame.pack_propagate(False)
 #welcome_frame.pack()
+
 
 # main_Window = canvas.create_window(2,2,window=welcome_frame, anchor='nw')
 canvas.create_image(2,2, anchor = 'nw', image = img)
