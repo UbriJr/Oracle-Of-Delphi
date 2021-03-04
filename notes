@@ -3,10 +3,9 @@ This is a text file, if you need to leave notes or etc you can do so in here.
 
 To Do:
 
-- Perfectly center the GUI
-- Add welcome img to canvas upon start                                    (DONE)
-- Add button to the canvas
-- Add action to button such that user traverses GUI
-- Add name to title bar of GUI                                            (DONE)
+- Add splash screen img to s.s
+- have john test how it looks on windows
+- sketch out how the final software will look
+- Add action to button
 - Fix Keyboard Interrupt error / bug
 

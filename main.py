@@ -8,48 +8,78 @@
 # Windows users: pip install opencv-python
 # or hover over the red underlined import and select "install opencv"
 
-# imports:
+# Import Modules:
+
 import cv2
 import numpy as np
 import tkinter as tk
 
-# Temp Variables
-light_slate_grey = "light slate gray"
-gray = "gray"
+time = 3000 # should be 3000
 
-# Variables
-height = 900   # Pixels
-width = 1100   # Pixels
+# Create object
+splash_root = tk.Tk()
 
-# Displays Tkinter GUI & Gives it Properties
-root = tk.Tk()
-root.title("Oracle of Delphi")
+# Removes Toolbar from Splash Screen
+splash_root.overrideredirect(1)
+splash_root.overrideredirect(0)
+
+# Adjust size & Centers Splash Screen
+splash_root_width = 640
+splash_root_height = 400
+
+sw = splash_root.winfo_screenwidth()
+sh = splash_root.winfo_screenheight()
+
+x = (sw/2)-(splash_root_width/2)
+y = (sh/2)-(splash_root_height/2)
+
+splash_root.geometry(f'{splash_root_width}x{splash_root_height}+{int(x)}+{int(y)}')
+splash_root.resizable(False, False)
+
+# Splash screen canvas & image
+splash_screen_canvas = tk.Canvas(splash_root, highlightthickness=0, width = splash_root_width, height = splash_root_height)
+splash_screen_img = tk.PhotoImage(file = "assets/splash_screen.png")
+splash_screen_canvas.create_image(0,0, anchor = 'nw', image = splash_screen_img)
+splash_screen_canvas.pack()
+
+# main window function
+def main():
+    # destory splash window
+    splash_root.destroy()
+
+    # Execute tkinter
+    root = tk.Tk()
+
+    # Adjust size
+    root_width = root.winfo_screenwidth()
+    root_height = root.winfo_screenheight()
+
+    root.geometry("%dx%d" % (root_width, root_height))
+    root.resizable(True, True)
+
+    # Properties
+    root.title("Oracle of Delphi")
+
+    # Main Canvas
+    main_frame = tk.Frame(root, bg="grey", highlightthickness=1, highlightbackground="blue", width=root_width, height=root_height)
+
+    main_frame.pack(expand = True, fill = 'both')
+
+    # Test Button (Thanks John :D! )
+    button = tk.Button(main_frame, background='#DEEBF7', activebackground='#DEEBF7', text="Button", width=9,border=0, font=("Helvetica 13 italic"))
+    button.pack() # pack literally packs the object somewhere in the box, top, left, right etc
+    button.place(relx=0.5, rely=0.5, anchor='center') # place lets you give absolute coordinates
+
+
+# Set Interval
+splash_root.after(time, main)
+
+# Execute tkinter
+tk.mainloop()
 
 #Created Button Above Background Image
-entry = tk.Button(root, text="Begin")
-entry.pack()
-
-img = tk.PhotoImage(file = "assets/oracle_img.png")
-
-canvas = tk.Canvas(root,highlightthickness=2, highlightbackground="steel blue", bg=light_slate_grey, height=height, width=width)
-canvas.pack()
-
-#welcome_frame = tk.Frame(root,highlightthickness=0, highlightbackground="black", bg="black", height=height, width=width)
-#welcome_frame.pack_propagate(False)
-#welcome_frame.pack()
-
-
-# main_Window = canvas.create_window(2,2,window=welcome_frame, anchor='nw')
-canvas.create_image(2,2, anchor = 'nw', image = img)
-
-root.resizable(False, False)
-root.eval('tk::PlaceWindow %s center' % root.winfo_pathname(root.winfo_id()))
-root.mainloop()
-
-
-
-
-
+#entry = tk.Button(root, text="Begin")
+#entry.pack()
 
 
 ############################################################################################################
