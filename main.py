@@ -14,7 +14,8 @@ import cv2
 import numpy as np
 import tkinter as tk
 
-time = 3000 # should be 3000
+# should be 3000
+time = 3000
 
 # Create object
 splash_root = tk.Tk()
