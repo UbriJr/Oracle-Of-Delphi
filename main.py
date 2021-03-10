@@ -24,10 +24,7 @@ splash_root.overrideredirect(1)
 splash_root.overrideredirect(0)
 
 # Removes Option to Close out of Loading Screen
-splash_root.overrideredirect(True)
-splash_root.geometry("{0}x{1}+0+0".format(splash_root.winfo_screenwidth(),splash_root.winfo_screenheight()))
-splash_root.resizable(width=False, height=False)
-
+# splash_root.overrideredirect(True)
 
 # Adjust size & Centers Splash Screen
 splash_root_width = 640
