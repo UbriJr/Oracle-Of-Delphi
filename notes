@@ -3,8 +3,7 @@ This is a text file, if you need to leave notes or etc you can do so in here.
 
 To Do:
 
-- Add splash screen img to s.s
-- have john test how it looks on windows
+- Have John remove toolbar / taskbar from loading screen
 - sketch out how the final software will look
 - Add action to button
 - Fix Keyboard Interrupt error / bug
