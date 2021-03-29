@@ -13,6 +13,7 @@
 import cv2
 import numpy as np
 import tkinter as tk
+from sys import platform
 
 time = 3000 # should be 3000
 
@@ -20,8 +21,17 @@ time = 3000 # should be 3000
 splash_root = tk.Tk()
 
 # Removes Toolbar from Splash Screen
-splash_root.overrideredirect(1)
-splash_root.overrideredirect(0)
+if platform == "linux" or platform == "linux2":
+    # Linux
+    splash_root.overrideredirect(1)
+    splash_root.overrideredirect(0)
+elif platform == "darwin":
+    # OS X
+    splash_root.overrideredirect(1)
+    splash_root.overrideredirect(0)
+elif platform == "win32":
+    # Windows
+    splash_root.overrideredirect(1)
 
 # Removes Option to Close out of Loading Screen
 # splash_root.overrideredirect(True)
